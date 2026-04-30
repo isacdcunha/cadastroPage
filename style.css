@@ -1,26 +1,88 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.titulo{
+.forms {
+    display: flex;
+    flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.forms{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
+.titulo {
+    margin: 50px;
 }
 
-input{
+input {
     padding: 5px;
-    border-radius: 15px;
+    margin: 20px 0;
+    width: 400px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #333;
+}
+
+.botao {
+    width: 200px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 30px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+.painel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: none;
+    animation: aparecer 0.3s ease;
+}
+
+.painel h2 {
+    margin-top: 0;
+}
+
+.painel p {
+    margin: 8px 0;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #888;
+    font-size: 18px;
+}
+
+.fechar:hover {
+    color: red;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

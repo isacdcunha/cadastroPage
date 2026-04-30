@@ -3,21 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Página de cadastro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <form>
         <div class="forms">
-        <h1 class="titulo">Cadastro de usuário</h1>
-        <label for="nome">Digite seu nome completo:</label>
-        <input type="text" id="nome"  placeholder="ex: Isabelle Cunha" required>
-        <label for="email">Digite seu email:</label>
-        <input type="email" id="email" placeholder="ex: isabelle@gmail.com">
-        <label for="idade">Digite sua idade:</label>
-        <input type="number" id="idade" placeholder="ex: 18" minlength="0" maxlength="120">
-        <button class="botao">Cadastrar</button>
+            <h1 class="titulo">Cadastro de usuário</h1>
+
+            <label for="nome">Digite seu nome completo:</label>
+            <input type="text" id="nome" placeholder="ex: Isabelle Cunha" required>
+
+            <label for="email">Digite seu email:</label>
+            <input type="email" id="email" placeholder="ex: isabelle@gmail.com">
+
+            <label for="idade">Digite sua idade:</label>
+            <input type="number" id="idade" placeholder="ex: 18">
+
+            <button type="button" class="botao" onclick="cadastro()">Cadastrar</button>
         </div>
     </form>
+
+    <div id="painelResposta" class="painel"></div>
+
+    <script>
+        function cadastro() {
+            let campoNome = document.getElementById('nome').value;
+            let campoEmail = document.getElementById('email').value;
+            let campoIdade = document.getElementById('idade').value;
+
+            let painel = document.getElementById('painelResposta');
+
+            painel.style.display = "block"; // 👈 MOSTRA O PAINEL
+
+            painel.innerHTML = `
+                <span class="fechar" onclick="fecharPainel()">×</span>
+                <h2>Dados cadastrados</h2>
+                <p><strong>Nome completo:</strong> ${campoNome}</p>
+                <p><strong>Email:</strong> ${campoEmail}</p>
+                <p><strong>Idade:</strong> ${campoIdade}</p>
+            `;
+        }
+
+        function fecharPainel() {
+            document.getElementById('painelResposta').style.display = "none";
+        }
+    </script>
+
 </body>
 </html>
