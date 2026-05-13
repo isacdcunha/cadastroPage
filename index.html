@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de cadastro</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -58,3 +57,125 @@
 
 </body>
 </html>
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Sans',Arial,sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFDF2;
+}
+
+.forms p{
+    font-size: 14px;
+}
+
+
+input{
+    background-color: #FFFDF2;
+    color: #000000;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    border-radius: 20px;
+    padding: 30px;
+    color: #FFFDF2;
+}
+
+.titulo {
+    margin: 50px;
+}
+
+input {
+    padding: 5px;
+    margin: 15px 0;
+    width: 400px;
+    border: none;
+    outline: none;
+    height: 28px;
+    padding-left: 15px;
+}
+
+.botao {
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #FFFDF2;
+    color: #000000;
+    border-radius: 30px;
+    border: none;
+    margin-left: 100px;
+    cursor: pointer;
+    margin-top: 15px;
+    
+}
+
+.botao:hover{
+    transition: background-color 0.8s, color 0.8s;
+    background-color: #888;
+    color: #FFFDF2;
+}
+
+.painel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 20px;
+    display: none;
+    animation: aparecer 0.3s ease;
+}
+
+.painel h2 {
+    margin-top: 0;
+}
+
+.painel p {
+    margin: 8px 0;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #888;
+    font-size: 18px;
+}
+
+.fechar:hover {
+    color: red;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
