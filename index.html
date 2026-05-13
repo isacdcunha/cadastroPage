@@ -13,13 +13,13 @@
             <h1 class="titulo">Cadastro de usuário</h1>
 
             <label for="nome">Digite seu nome completo:</label>
-            <input type="text" id="nome" placeholder="ex: Isabelle Cunha" required>
+            <input type="text" id="nome" placeholder="ex: Isabelle Cunha" required minlength="3">
 
             <label for="email">Digite seu email:</label>
             <input type="email" id="email" name="email" placeholder="ex: isabelle@gmail.com" required>
 
             <label for="idade">Digite sua idade:</label>
-            <input type="number" id="idade" placeholder="ex: 18">
+            <input type="number" id="idade" placeholder="ex: 18" min="0" max="120">
 
             <button type="submit" class="botao">CADASTRAR</button>
         </div>
